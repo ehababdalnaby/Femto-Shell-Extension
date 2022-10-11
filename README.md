@@ -26,7 +26,7 @@
 ---
 ## 1. Compilation command <a name = "Compilation_command"></a>
 - ### ⛏️ compilation command
-    ```$ gcc -o shell main.c```
+    ```$ gcc -o shell  prompt/prompt.c tokenizer/tokenizer.c main.c variables/vars.c executer/executer.c builtincmd/builtinCMD.c```
 - ### 💻 output
     >![compilation output](./pic/gcc.png)
 
@@ -47,6 +47,7 @@
     - ####  Examples
         - #### 💻 export Local variables
             >![ls ouput](./pic/export1.png)
+
             >![ls ouput](./pic/export2.png)
     
 
