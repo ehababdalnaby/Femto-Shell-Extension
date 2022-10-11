@@ -244,6 +244,14 @@ void export(char **argv) {
       setenv(argv[1], localVarValues[varIndex], 1);
     }
   }
+  else
+  {
+    int i = 0;
+    while (environ[i])
+    {
+      printf("declare -x %s\n",environ[i]); i++;
+    }
+  }
 }
 
 void printHeader(void) {
@@ -275,7 +283,7 @@ int main(void) {
       parseLine(line, argv);
       int end_of_var_name = isVariable(argv);
       if (end_of_var_name > 0) {
-        printf("it is var\n");
+       // printf("it is var\n");
         setVariable(argv, end_of_var_name);
       } else if (strcmp(argv[0], "set") == 0) {
         set();
