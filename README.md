@@ -20,7 +20,8 @@
 - [3. Extra feature](#extra)
     - [1. cd command](#cd)
     - [2. IO redirection](#redirection)
-    - [3. Support commands from assigment #2](#old)
+    - [3. Pipe feature](#pipe)
+    - [4. Support commands from assigment #2](#old)
 
 
 ---
@@ -67,7 +68,13 @@
             >![Output and error redirection](./pic/r3.png)
         - #### 💻 Input redirection
             >![Input redirection](./pic/r4.png)
-- ### 3. Support commands from [assigment #2](https://github.com/ehababdalnaby/Femto-Unix-Utilities-pwd-echo-cp-mv)<a name = "old"></a>
+- ### 3. Pipe feature <a name = "pipe"></a>
+    - ####  Examples
+        - #### 💻 Output redirection 
+            >![Ouput redirection](./pic/pipe1.png)
+
+            >![Ouput redirection](./pic/pipe2.png)
+- ### 4. Support commands from [assigment #2](https://github.com/ehababdalnaby/Femto-Unix-Utilities-pwd-echo-cp-mv)<a name = "old"></a>
     - #### 💻 Output
         >![old commands](./pic/old.png)
 
