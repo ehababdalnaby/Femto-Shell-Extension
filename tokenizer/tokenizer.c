@@ -79,6 +79,11 @@ int tokenstr(char *buf, char del, char **argv) {
         i++;
       }
       buf[i] = '\0';
+      if (strcmp(argv[argv_index], "ls") == 0) {
+        static char color[] = "--color=auto";
+        argv[argv_index+1] = color;
+        argv_index++;
+      }
       i++;
       argv_index++;
     } else {
@@ -92,11 +97,5 @@ void parseLine(char *line, char **argv) {
   char *token;
   int i = 0;
   i = tokenstr(line, ' ', argv);
-  if (strcmp(argv[0], "ls") == 0) {
-    static char color[] = "--color=auto";
-    argv[i] = color;
-    argv[i + 1] = NULL;
-  } else {
     argv[i] = NULL;
-  }
 }
