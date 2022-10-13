@@ -24,8 +24,8 @@
   - [2. IO redirection](#redirection)
   - [3. Pipe feature](#pipe)
   - [4. edit input line](#)
-  - [3. Previos command using up and down keys](#)
-  - [4. Support commands from assignment #2](#old)
+  - [5. Previos command using up and down keys](#)
+  - [6. Support commands from assignment #2](#old)
 
 ---
 
@@ -123,7 +123,7 @@ install readline library.
 
     >![Ouput redirection](./pic/pipe2.png)
 
-- ### 4. Support commands from [assignment #2](https://github.com/ehababdalnaby/Femto-Unix-Utilities-pwd-echo-cp-mv)<a name = "old"></a>
+- ### 6. Support commands from [assignment #2](https://github.com/ehababdalnaby/Femto-Unix-Utilities-pwd-echo-cp-mv)<a name = "old"></a>
 
 - #### 💻 Output
 
