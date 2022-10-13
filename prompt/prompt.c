@@ -5,15 +5,20 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-void printPrompet(void) {
+#define PROMPT_SIZE 100
+
+static char prompt[PROMPT_SIZE] = {0};
+ char *printPrompet(void) {
   char host[10] = {0};
   struct passwd *user = NULL;
   user = getpwuid(geteuid());
   gethostname(host, 10);
   char dir[PATH_MAX] = {0};
-  printf(USER_COLOR "%s@%s" ANSI_COLOR_RESET ":" DIR_COLOR "%s" ANSI_COLOR_RESET
-                    "$ ",
-         user->pw_name, host, getcwd(dir, PATH_MAX));
+  sprintf(prompt,
+          USER_COLOR "%s@%s" ANSI_COLOR_RESET ":" DIR_COLOR
+                     "%s" ANSI_COLOR_RESET"$ ",
+          user->pw_name, host, getcwd(dir, PATH_MAX));
+          return prompt;
 }
 
 void printHeader(void) {

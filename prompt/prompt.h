@@ -12,8 +12,17 @@
 #define USER_COLOR ANSI_COLOR_CYAN
 #define DIR_COLOR ANSI_COLOR_MAGENTA
 
-
-void printPrompet(void);
+/**
+ * @brief this function print the prompt of the shell.
+ the prompt consist of user name and host name and current workin directory.  
+ * @return pointer to the prompt.
+ */
+char * printPrompet(void);
+/**
+ * @brief this function print the header of the shell at the beginning or
+  when clear command executed.
+ * 
+ */
 void printHeader(void);
 
 

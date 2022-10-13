@@ -8,7 +8,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-
 void redirection(char **argv) {
   int i = 1;
   int endOfargv = -1;
@@ -71,7 +70,9 @@ void redirection(char **argv) {
 int tokenstr(char *buf, char del, char **argv) {
   int i = 0;
   int argv_index = 0;
-  while (buf[i] != '\0') {
+  static char color[] = "--color=auto";
+  int buflen = strlen(buf);
+  while (i < buflen) {
     if (buf[i] != del) {
       argv[argv_index] = &buf[i];
       while (buf[i] != del && buf[i] != '\0') {
@@ -80,8 +81,7 @@ int tokenstr(char *buf, char del, char **argv) {
       }
       buf[i] = '\0';
       if (strcmp(argv[argv_index], "ls") == 0) {
-        static char color[] = "--color=auto";
-        argv[argv_index+1] = color;
+        argv[argv_index + 1] = color;
         argv_index++;
       }
       i++;
@@ -97,5 +97,5 @@ void parseLine(char *line, char **argv) {
   char *token;
   int i = 0;
   i = tokenstr(line, ' ', argv);
-    argv[i] = NULL;
+  argv[i] = NULL;
 }

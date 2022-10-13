@@ -3,10 +3,25 @@
 #include <string.h>
 #include "vars.h"
 
+/**
+ * @brief size of the local variables array
+ * 
+ */
 #define LOCAL_VARS_NUM 100
-
+/**
+ * @brief this array contains the env variables   
+ * 
+ */
 extern char **environ;
+/**
+ * @brief array that contains the local variables names
+ * 
+ */
 char *localVar[LOCAL_VARS_NUM] = {0};
+/**
+ * @brief array that contains the local variables values
+ * 
+ */
 char *localVarValues[LOCAL_VARS_NUM] = {0};
 
 
