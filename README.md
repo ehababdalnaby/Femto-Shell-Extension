@@ -129,4 +129,4 @@ install readline library.
 
 - #### 💻 Output
 
-        >![old commands](./pic/old.png)
+    >![old commands](./pic/old.png)
