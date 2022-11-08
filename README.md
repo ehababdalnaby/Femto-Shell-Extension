@@ -36,6 +36,8 @@ install readline library.
 - ### ⛏️ Command
 
     ```$ sudo apt-get install lib32readline8 lib32readline-dev```
+    or
+     ```$ sudo apt-get install libreadline-dev```
 
 ## 2. Compilation command <a name = "Compilation_command"></a>
 
