@@ -71,7 +71,7 @@ int isVarExist(char *var, int *firstEmptySpace) {
 }
 void setVariable(char **argv, int end_of_var_name) {
   int lenOfVal = strlen(argv[0]) - 1 - end_of_var_name;
-  char *var = (char *)malloc(end_of_var_name + 1);
+  char *var = (char *)calloc(1,end_of_var_name + 1);
   strncpy(var, argv[0], end_of_var_name);
   int firstEmptySpace = 0;
   int indexOfVar = isVarExist(var, &firstEmptySpace);

@@ -4,8 +4,8 @@
 #include "./prompt/prompt.h"
 #include "./tokenizer/tokenizer.h"
 #include "./variables/vars.h"
-#include <readline/history.h>
 #include <readline/readline.h>
+#include <readline/history.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
