@@ -51,7 +51,7 @@ void executePipe(char **argv, int pipeIndex)
   }
 }
 
-    void execute(char **argv) {
+  void execute(char **argv) {
   char mypath[] = "/mnt/e/Linux/simpleShell/builtinCommands";
   char pathenv[strlen(mypath) + 10];
   pid_t pid = 0;

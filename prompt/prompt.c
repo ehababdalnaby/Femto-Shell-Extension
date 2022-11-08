@@ -6,12 +6,13 @@
 #include <unistd.h>
 
 #define PROMPT_SIZE 100
-
+char *home = NULL;
 static char prompt[PROMPT_SIZE] = {0};
  char *printPrompet(void) {
   char host[10] = {0};
   struct passwd *user = NULL;
   user = getpwuid(geteuid());
+  home = user->pw_dir;
   gethostname(host, 10);
   char dir[PATH_MAX] = {0};
   sprintf(prompt,
